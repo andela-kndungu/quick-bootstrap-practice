@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 
 const entryPath = path.join(__dirname, 'app/index.jsx');
@@ -19,13 +20,17 @@ module.exports = {
       loader: 'babel-loader',
       include: path.join(__dirname, 'app'),
       query: {
-        presets: ['es2015', 'react']
+        presets: ['es2015', 'react', 'react-hmre']
       }
     }]
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   devServer: {
     contentBase: 'public',
-    inline: true
+    inline: true,
+    hot: true
   }
 };
 
