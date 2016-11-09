@@ -1,7 +1,6 @@
-const webpack = require('webpack');
 const path = require('path');
 
-const entryPath = path.join(__dirname, 'app/index.js');
+const entryPath = path.join(__dirname, 'app/index.jsx');
 const assetsPath = path.join(__dirname, 'public/build');
 
 module.exports = {
@@ -16,11 +15,11 @@ module.exports = {
   },
   module: {
     loaders: [{
-      test: /\.js$/,
+      test: /\.jsx$/,
       loader: 'babel-loader',
       include: path.join(__dirname, 'app'),
       query: {
-        presets: ['es2015']
+        presets: ['es2015', 'react']
       }
     }]
   },
