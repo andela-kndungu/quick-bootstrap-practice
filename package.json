@@ -1,0 +1,18 @@
+{
+  "name": "quick-bootstrap-practice",
+  "version": "1.0.0",
+  "description": "Getting familiar with Bootstrap + React",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "url": "git@github.com:andela-kndungu/quick-bootstrap-practice.git",
+    "type": "git"
+  },
+  "author": "Kinuthia Ndung'u <kinuthia.ndungu@andela.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
