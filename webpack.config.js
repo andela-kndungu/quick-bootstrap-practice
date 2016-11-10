@@ -29,6 +29,11 @@ module.exports = {
         loader: 'style-loader!css-loader'
       },
       {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass'],
+        include: path.join(__dirname, 'app')
+      },
+      {
         test: /\.png$/,
         loader: 'url-loader?limit=100000'
       },
